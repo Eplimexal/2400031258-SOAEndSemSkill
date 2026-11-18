@@ -1,0 +1,87 @@
+Windows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Rohan> cd Desktop\Docker-working
+PS C:\Users\Rohan\Desktop\Docker-working> ls
+
+
+    Directory: C:\Users\Rohan\Desktop\Docker-working
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        17-11-2026     16:03                .dist
+d-----        18-11-2026     05:48                .metadata
+d-----        18-11-2026     05:44                app-db
+d-----        18-11-2026     05:49                app-service
+-a----        18-11-2026     05:46            848 docker-compose.yml
+
+
+PS C:\Users\Rohan\Desktop\Docker-working>docker compose up --build -d
+[+] up 14/14
+ ✔ Image postgres:16-alpine Pulled-------------------------------------------22.8s
+[+] Building 120.1s (16/16) FINISHED
+ => [internal] load local bake definitions                                                                                               0.0s
+ => => reading from stdin 595B                                                                                                           0.0s
+ => [internal] load build definition from Dockerfile                                                                                     0.1s
+ => => transferring dockerfile: 338B                                                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-alpine                                                         4.5s
+ => [internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-21                                                          4.5s 
+ => [internal] load .dockerignore                                                                                                        0.1s
+ => => transferring context: 2B                                                                                                          0.0s 
+ => [build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f82  74.2s 
+ => => resolve docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320    0.1s 
+ => => sha256:405aa165b3ac61a5d93c2398a95cdd881401cceda86849dde23f6293310b70c0 154B / 154B                                               0.3s 
+ => => sha256:a466b9e11010eac13b4d1ac50894b683c5fbc95be50dc4dedcdec9c979f98f96 851B / 851B                                               0.3s 
+ => => sha256:1bf7f7b7d02f74fa2a38d4325c84dcaf0e91faae8e30f221d86c841b0c4f6647 9.36MB / 9.36MB                                           8.6s 
+ => => sha256:bd0bb49686d38ffc090c15f30d472cdb0354fb8cf46c03f21f4f2764d4e4efcd 24.96MB / 24.96MB                                        10.2s
+ => => sha256:49cf9009e0af3adc96baebc58dcde451a6858961e0c027ba7f7ba3075e7240ba 2.46kB / 2.46kB                                           0.5s
+ => => sha256:f1408710f65cf2f33054c8d5b33ab1f5684c9ffcfc81bc01e550faec04fa9d0b 157B / 157B                                               0.3s
+ => => sha256:07bad0cccfa15aac629986ee3771c057c7690f9ce635dda839f652e54c911318 158.12MB / 158.12MB                                      62.0s
+ => => sha256:c5b9275bc0db751e2d75dfe63b7fe841f35111d72e930782de032d5d13d45ab1 22.95MB / 22.95MB                                        19.6s 
+ => => sha256:edd1ed89f0d443580bd42e5a10cd8736aba5a3438b2a0645c2ebb50119bb0eba 29.76MB / 29.76MB                                        23.5s 
+ => => extracting sha256:edd1ed89f0d443580bd42e5a10cd8736aba5a3438b2a0645c2ebb50119bb0eba                                                1.2s
+ => => extracting sha256:c5b9275bc0db751e2d75dfe63b7fe841f35111d72e930782de032d5d13d45ab1                                                1.0s 
+ => => extracting sha256:07bad0cccfa15aac629986ee3771c057c7690f9ce635dda839f652e54c911318                                                2.1s 
+ => => extracting sha256:f1408710f65cf2f33054c8d5b33ab1f5684c9ffcfc81bc01e550faec04fa9d0b                                                0.0s 
+ => => extracting sha256:49cf9009e0af3adc96baebc58dcde451a6858961e0c027ba7f7ba3075e7240ba                                                0.0s 
+ => => extracting sha256:bd0bb49686d38ffc090c15f30d472cdb0354fb8cf46c03f21f4f2764d4e4efcd                                                0.9s 
+ => => extracting sha256:1bf7f7b7d02f74fa2a38d4325c84dcaf0e91faae8e30f221d86c841b0c4f6647                                                0.1s 
+ => => extracting sha256:a466b9e11010eac13b4d1ac50894b683c5fbc95be50dc4dedcdec9c979f98f96                                                0.0s 
+ => => extracting sha256:405aa165b3ac61a5d93c2398a95cdd881401cceda86849dde23f6293310b70c0                                                0.0s 
+ => [internal] load build context                                                                                                        0.3s 
+ => => transferring context: 2.75kB                                                                                                      0.0s 
+ => [stage-1 1/3] FROM docker.io/library/eclipse-temurin:21-jre-alpine@sha256:ac05c3c42b7c2f1a52c9bd52f01041fa1958231b15ebeae7420429cb  18.4s 
+ => => resolve docker.io/library/eclipse-temurin:21-jre-alpine@sha256:ac05c3c42b7c2f1a52c9bd52f01041fa1958231b15ebeae7420429cbc5baf474   0.1s 
+ => => extracting sha256:881fc932939efef04ca120ad44bbd2c0917851eb247aa4995428afb1e80ede17                                                0.3s 
+ => => sha256:e84ee4d88719efe0c0f5723556c11c87be2c0094c89dce0bb75f768f6dd74605 2.46kB / 2.46kB                                           0.6s 
+ => => sha256:6ac8bacad3044dd68d9bbbc26ed22c6674c4149fc01ef8d074f009f484341d4f 53.38MB / 53.38MB                                        16.4s 
+ => => sha256:2d99ac440d39bbade5ae9f2dd56b69d8234c4e540282df61003829295761e4fe 16.97MB / 16.97MB                                         7.3s 
+ => => sha256:c85a6771097082b2df91a6477c3314ec25a91b894210dd741baae08d3e41b4b3 127B / 127B                                               0.9s 
+ => => extracting sha256:2d99ac440d39bbade5ae9f2dd56b69d8234c4e540282df61003829295761e4fe                                                0.7s 
+ => => extracting sha256:6ac8bacad3044dd68d9bbbc26ed22c6674c4149fc01ef8d074f009f484341d4f                                                1.2s 
+ => => extracting sha256:c85a6771097082b2df91a6477c3314ec25a91b894210dd741baae08d3e41b4b3                                                0.0s 
+ => => extracting sha256:e84ee4d88719efe0c0f5723556c11c87be2c0094c89dce0bb75f768f6dd74605                                                0.0s 
+ => [stage-1 2/3] WORKDIR /app                                                                                                           1.0s 
+ => [build 2/5] WORKDIR /workspace                                                                                                       0.3s 
+ => [build 3/5] COPY pom.xml .                                                                                                           0.0s 
+ => [build 4/5] COPY src ./src                                                                                                           0.0s 
+ => [build 5/5] RUN mvn -B -DskipTests package                                                                                          36.3s 
+ => [stage-1 3/3] COPY --from=build /workspace/target/app-service-1.0.0.jar /app/app.jar                                                 0.1s 
+ => exporting to image                                                                                                                   3.4s 
+PS C:\Users\Rohan\Desktop\Docker-working>curl.exe http://localhost:8080/api/data
+{"status":"ok","data":{"database":"appdb","server_time":"2026-11-18T00:27:06.803+00:00"}}
+PS C:\Users\Rohan\Desktop\Docker-working> docker compose down
+[+] down 3/3
+ ✔ Container docker-working-app-service-1 Removed0.5s
+ ✔ Container docker-working-app-db-1      Removed0.4s
+ ✔ Network docker-working_defaultRemoved0.3s
+PS C:\Users\Rohan\Desktop\Docker-working>
+
+
+
+
+
+
+
+
